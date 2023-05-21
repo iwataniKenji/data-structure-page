@@ -1,7 +1,7 @@
 import { ThemeProvider, createTheme } from "@mui/material";
-import { Navbar } from "./components/Navbar";
 import { ContentSection } from "./components/ContentSection";
 import { createContext, useMemo, useState } from "react";
+import { Navbar } from "./components/Navbar";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
