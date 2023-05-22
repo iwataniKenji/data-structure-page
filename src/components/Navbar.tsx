@@ -3,7 +3,6 @@ import {
   Box,
   Toolbar,
   IconButton,
-  Typography,
   Menu,
   Container,
   Button,
@@ -12,18 +11,26 @@ import {
 import { ColorModeContext } from "../App";
 import { useContext, useState, MouseEvent } from "react";
 import { colors } from "../data/colors";
+import { useNavigate } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
-const pages = ["Home", "Introdução", "Listas", "Pilhas", "Filas", "Árvores"];
-
 export function Navbar() {
+  const navigate = useNavigate();
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
   const isDarkMode = theme.palette.mode === "dark";
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+
+  const goToHome = () => {
+    navigate("/");
+  };
+
+  const goToIntro = () => {
+    navigate("/intro");
+  };
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -32,6 +39,15 @@ export function Navbar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const pages = [
+    { name: "Home", onClick: goToHome },
+    { name: "Introdução", onClick: goToIntro },
+    // { name: "Listas" },
+    // { name: "Pilhas" },
+    // { name: "Filas" },
+    // { name: "Árvores" },
+  ];
 
   return (
     <Box sx={{ backgroundColor: "background.default" }}>
@@ -70,8 +86,14 @@ export function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  <Button
+                    sx={{ color: "text.primary" }}
+                    key={page.name}
+                    onClick={page.onClick}
+                  >
+                    {page.name}
+                  </Button>
                 </MenuItem>
               ))}
             </Menu>
@@ -82,11 +104,11 @@ export function Navbar() {
           >
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "text.primary", display: "block" }}
+                sx={{ color: "text.primary" }}
+                key={page.name}
+                onClick={page.onClick}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
