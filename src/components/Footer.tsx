@@ -1,4 +1,5 @@
 import { Box, Container, IconButton, Typography } from "@mui/material";
+import { colors } from "../data/colors";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -46,9 +47,9 @@ export function Footer() {
                 target="_blank"
                 sx={{
                   backgroundColor: "#ffffff",
-                  color: "#38444c",
+                  color: colors.dark,
                   "&:hover": {
-                    backgroundColor: "#e8e8e8",
+                    backgroundColor: colors.light,
                     transition: "background-color 0.3s",
                   },
                 }}

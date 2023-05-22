@@ -1,6 +1,5 @@
 import {
   useTheme,
-  AppBar,
   Box,
   Toolbar,
   IconButton,
@@ -12,15 +11,17 @@ import {
 } from "@mui/material";
 import { ColorModeContext } from "../App";
 import { useContext, useState, MouseEvent } from "react";
+import { colors } from "../data/colors";
 import MenuIcon from "@mui/icons-material/Menu";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 
-const pages = ["Introdução", "Listas", "Pilhas", "Filas", "Árvores"];
+const pages = ["Home", "Introdução", "Listas", "Pilhas", "Filas", "Árvores"];
 
 export function Navbar() {
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
+  const isDarkMode = theme.palette.mode === "dark";
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
@@ -33,14 +34,20 @@ export function Navbar() {
   };
 
   return (
-    <AppBar position="static">
+    <Box sx={{ backgroundColor: "background.default" }}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar
+          disableGutters
+          sx={{
+            borderBottom: "1px solid",
+            borderColor: colors.light,
+          }}
+        >
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              sx={{ color: isDarkMode ? colors.light : colors.dark }}
             >
               <MenuIcon />
             </IconButton>
@@ -70,12 +77,14 @@ export function Navbar() {
             </Menu>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, gap: 2 }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "text.primary", display: "block" }}
               >
                 {page}
               </Button>
@@ -89,14 +98,14 @@ export function Navbar() {
               color="inherit"
             >
               {theme.palette.mode === "dark" ? (
-                <Brightness7Icon />
+                <DarkModeIcon sx={{ color: colors.light }} />
               ) : (
-                <Brightness4Icon />
+                <LightModeIcon sx={{ color: colors.dark }} />
               )}
             </IconButton>
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </Box>
   );
 }

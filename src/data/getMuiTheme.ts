@@ -20,7 +20,7 @@ export function getMuiTheme(mode: "light" | "dark") {
             },
           }),
       primary: {
-        main: "#6D7D8C",
+        main: "#6d7d8c",
       },
     },
   });
