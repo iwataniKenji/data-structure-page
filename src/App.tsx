@@ -1,7 +1,9 @@
-import { ThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import { ContentSection } from "./components/ContentSection";
 import { createContext, useMemo, useState } from "react";
 import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
+import { getMuiTheme } from "./data/getMuiTheme";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
@@ -16,21 +18,14 @@ function App() {
     []
   );
 
-  const theme = useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-        },
-      }),
-    [mode]
-  );
+  const theme = useMemo(() => getMuiTheme(mode), [mode]);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <Navbar />
         <ContentSection />
+        <Footer />
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
