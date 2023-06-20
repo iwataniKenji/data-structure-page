@@ -32,6 +32,10 @@ export function Navbar() {
     navigate("/intro");
   };
 
+  const goToArrays = () => {
+    navigate("/array");
+  };
+
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -43,7 +47,7 @@ export function Navbar() {
   const pages = [
     { name: "Home", onClick: goToHome },
     { name: "Introdução", onClick: goToIntro },
-    // { name: "Listas" },
+    { name: "Vetores", onClick: goToArrays },
     // { name: "Pilhas" },
     // { name: "Filas" },
     // { name: "Árvores" },

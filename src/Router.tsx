@@ -1,15 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { Introducao } from "./pages/Introducao";
+import { HomeSection } from "./pages/HomeSection";
+import { IntroSection } from "./pages/IntroSection";
 import App from "./App";
+import { ArraySection } from "./pages/ArraySection";
 
 export function Router() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="/intro" element={<Introducao />} />
-          <Route index element={<Home />} />
+          <Route path="/intro" element={<IntroSection />} />
+          <Route path="/array" element={<ArraySection />} />
+          <Route index element={<HomeSection />} />
         </Route>
       </Routes>
     </BrowserRouter>
