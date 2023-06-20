@@ -5,13 +5,11 @@ export function ContentSection() {
   return (
     <Box
       sx={{
-        height: "100vh",
         backgroundColor: "background.default",
-        py: 3,
       }}
     >
       <Container maxWidth="xl">
-        <Box sx={{ py: 10, color: "text.primary" }}>
+        <Box sx={{ pt: 4, pb: 6, color: "text.primary" }}>
           <Outlet />
         </Box>
       </Container>
