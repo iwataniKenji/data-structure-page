@@ -38,6 +38,10 @@ export function IntroSection() {
             possui características específicas que a tornam adequada para
             diferentes tipos de problemas e operações.
           </Typography>
+          <Typography>
+            Para mais informações navegue pelas seções presentes na barra
+            superior.
+          </Typography>
         </Box>
       </Box>
     </Container>

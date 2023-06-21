@@ -2,6 +2,35 @@ import { Box, Container, Typography } from "@mui/material";
 import { CodeBoard } from "../components/CodeBoard";
 
 export function ArraySection() {
+  const vetorMatrizExample = `  #include <stdio.h>
+  #include <stdlib.h>
+  #include <time.h>
+
+  int main() {
+    // vetor unidimensional com tamanho 5
+    int vetor[5]; 
+    int i;
+
+    // atribui valores ao array em um loop
+    for (i = 0; i < 5; i++) {
+      vetor[i] = i + 1;
+    }
+
+    // matriz bidimensional com 3 linhas e 3 colunas
+    int matriz[3][3]; 
+    int j;
+
+    // atribuindo valores aos elementos da matriz
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            matriz[i][j] = (i + 1) * (j + 1);
+        }
+    }
+  
+    return 0;
+  }
+  `;
+
   const mallocReallocExample = `  #include <stdio.h>
   #include <stdlib.h>
   #include <time.h>
@@ -56,6 +85,7 @@ export function ArraySection() {
             índices que geralmente são representados em linhas e colunas. Segue
             abaixo um exemplo de ambos os tipos de vetores:
           </Typography>
+          <CodeBoard codeSnippet={vetorMatrizExample} />
         </Box>
         <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
           Vantagens e desvantagens
@@ -81,7 +111,8 @@ export function ArraySection() {
             maior caso seja necessário armazenar mais elementos do que o vetor
             suporta inicialmente. Para isso, na linguagem C, utilizamos os
             métodos malloc para alocar espaço na memória e realloc para mudar a
-            dimensão do vetor caso seja necessário.
+            dimensão do vetor caso seja necessário. Veja o código a seguir
+            exemplificando a abordagem e m C.
           </Typography>
           <CodeBoard codeSnippet={mallocReallocExample} />
         </Box>
