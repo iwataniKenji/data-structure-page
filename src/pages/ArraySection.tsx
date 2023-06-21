@@ -60,7 +60,7 @@ export function ArraySection() {
 
   return (
     <Container maxWidth="lg">
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
         <Typography sx={{ fontSize: 32, fontWeight: 500 }}>Vetores</Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography>

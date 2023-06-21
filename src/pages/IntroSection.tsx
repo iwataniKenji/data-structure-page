@@ -3,7 +3,7 @@ import { Box, Container, Typography } from "@mui/material";
 export function IntroSection() {
   return (
     <Container maxWidth="lg">
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
         <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
           Introdução
         </Typography>
@@ -29,6 +29,7 @@ export function IntroSection() {
             eficiência e o desempenho de um programa.
           </Typography>
         </Box>
+
         <Typography sx={{ fontSize: 32, fontWeight: 500 }}>Tipos</Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography>
@@ -38,11 +39,28 @@ export function IntroSection() {
             possui características específicas que a tornam adequada para
             diferentes tipos de problemas e operações.
           </Typography>
+
           <Typography>
-            Para mais informações navegue pelas seções presentes na barra
-            superior.
+            Abaixo segue um vídeo introdutório sobre as principais estruturas de
+            dados e algumas aplicações:
           </Typography>
+          <Box sx={{ margin: "0 auto" }}>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/EfF1M7myAyY"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            ></iframe>
+          </Box>
         </Box>
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          Mais informações
+        </Typography>
+        <Typography>
+          Para mais informações navegue pelas seções presentes na barra
+          superior.
+        </Typography>
       </Box>
     </Container>
   );
