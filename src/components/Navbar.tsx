@@ -51,7 +51,14 @@ export function Navbar() {
   };
 
   return (
-    <Box sx={{ backgroundColor: "background.default" }}>
+    <Box
+      sx={{
+        backgroundColor: "background.default",
+        position: "sticky",
+        top: 0,
+        zIndex: 1,
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
