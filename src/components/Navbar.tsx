@@ -24,17 +24,23 @@ export function Navbar() {
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
-  const goToHome = () => {
-    navigate("/");
-  };
+  const goToHome = () => navigate("/");
+  const goToIntro = () => navigate("/intro");
+  const goToArrays = () => navigate("/array");
+  const goToLists = () => navigate("/list");
+  const goToStacks = () => navigate("/stack");
+  const goToQueues = () => navigate("/queue");
+  const goToTrees = () => navigate("/tree");
 
-  const goToIntro = () => {
-    navigate("/intro");
-  };
-
-  const goToArrays = () => {
-    navigate("/array");
-  };
+  const pages = [
+    { name: "Home", onClick: goToHome },
+    { name: "Introdução", onClick: goToIntro },
+    { name: "Vetores", onClick: goToArrays },
+    { name: "Listas", onClick: goToLists },
+    { name: "Pilhas", onClick: goToStacks },
+    { name: "Filas", onClick: goToQueues },
+    { name: "Árvores", onClick: goToTrees },
+  ];
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -43,15 +49,6 @@ export function Navbar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  const pages = [
-    { name: "Home", onClick: goToHome },
-    { name: "Introdução", onClick: goToIntro },
-    { name: "Vetores", onClick: goToArrays },
-    // { name: "Pilhas" },
-    // { name: "Filas" },
-    // { name: "Árvores" },
-  ];
 
   return (
     <Box sx={{ backgroundColor: "background.default" }}>
