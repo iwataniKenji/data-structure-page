@@ -10,22 +10,30 @@ export function CodeBoard({ codeSnippet }: Props) {
 
   return (
     <Container
-      sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+      maxWidth="md"
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
     >
       <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "start",
           fontFamily: "Courier New, monospace",
           fontSize: 14,
-          pr: 1,
+          px: 2,
+          py: 4,
           border: "1px solid #ccc",
           resize: "none",
           background: isDarkMode ? "#333" : "#fff",
           color: isDarkMode ? "#fff" : "#333",
+          width: "100%",
+          overflowX: "auto",
         }}
       >
-        <pre>{codeSnippet}</pre>
+        <pre style={{ whiteSpace: "pre-wrap", margin: 0 }}>{codeSnippet}</pre>
       </Box>
     </Container>
   );
