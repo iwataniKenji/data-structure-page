@@ -17,6 +17,7 @@ export function LinkedListSection() {
     Node* node2 = NULL;
     Node* node3 = NULL; 
     
+    // aloca memória para os nós
     node1 = malloc(sizeof(Node));
     node2 = malloc(sizeof(Node));
     node3 = malloc(sizeof(Node));
@@ -37,6 +38,50 @@ export function LinkedListSection() {
     printf("%d ", node1->next->next->data); // 3
 
     return 0;
+  }`;
+
+  const insertNodeExample = `  void insertAtEnd(Node** head, int data) {
+    Node* newNode = createNode(data); // método a parte para criar um node
+  
+    // se a lista estiver vazia, o novo nó se torna o primeiro nó
+    if (*head == NULL) {
+      *head = newNode;
+    } else {
+      Node* current = *head;
+  
+      while (current->next != NULL) {
+        current = current->next;
+      }
+  
+      // adiciona o novo nó no final
+      current->next = newNode;
+    }
+  }`;
+
+  const removeNodeExample = `  void removeFromEnd(Node** head) {
+    // caso lista esteja vazia
+    if (*head == NULL) return;
+    
+    // caso haja apenas um nó
+    if ((*head)->next == NULL) { 
+      free(*head);
+      *head = NULL;
+
+      return;
+    }
+
+    Node* current = *head;
+    Node* previous = NULL;
+
+    // percorre até o último nó
+    while (current->next != NULL) {
+      previous = current;
+      current = current->next;
+    }
+
+    // remove o último nó
+    previous->next = NULL;
+    free(current);
   }`;
 
   return (
@@ -64,15 +109,6 @@ export function LinkedListSection() {
               }}
             />
           </Box>
-          <Typography>
-            Segue um exemplo de código sobre lista encadeada simples. Em uma
-            explicação sucinta, é criado 3 estruturas chamados 'node' que contém
-            um valor inteiro e um ponteiro para o próximo nó. Após declaração e
-            alocação de memória, os nós são encadeados em fila com um nó
-            apontando para o próximo, resultando em "1 2 3" na impressão dos
-            valores.
-          </Typography>
-          <CodeBoard codeSnippet={linkedListExample} />
           <Typography>
             Essas listas podem ser simplesmente encadeada ou duplamente
             encadeada. Na simplesmente encadeada, cada nó possui apenas um
@@ -111,6 +147,39 @@ export function LinkedListSection() {
             frequência. Elas são amplamente utilizadas em diversas aplicações,
             como a implementação de pilhas, filas, árvores e grafos
           </Typography>
+          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+            Exemplos em código
+          </Typography>
+          <Typography>
+            Segue um exemplo de código sobre lista encadeada simples. Em uma
+            explicação sucinta, é criado 3 estruturas chamados 'node' que contém
+            um valor inteiro e um ponteiro para o próximo nó. Após declaração e
+            alocação de memória, os nós são encadeados em fila com um nó
+            apontando para o próximo, resultando em "1 2 3" na impressão dos
+            valores.
+          </Typography>
+          <CodeBoard codeSnippet={linkedListExample} />
+          <Typography fontSize={18} fontWeight={500}>
+            INSERÇÃO:
+          </Typography>
+          <Typography>
+            Neste outro exemplo temos um método que faz a inserção de um novo nó
+            no final da lista passando o primeiro nó e o valor inteiro como
+            parâmetros. Para verificar que o nó atual é o último da lista ele
+            checa se o ponteiro next é NULL, atribuindo o novo valor neste caso.
+          </Typography>
+          <CodeBoard codeSnippet={insertNodeExample} />
+          <Typography fontSize={18} fontWeight={500}>
+            REMOÇÃO:
+          </Typography>
+          <Typography>
+            Em casos de remoção podemos passar o primeiro nó e percorrer a lista
+            até achar o último elemento. Achado o nó que aponta para NULL,
+            ajustamos o ponteiro do nó anterior ao último para NULL, indicando
+            que este é o novo último nó da lista. Em seguida, libera-se a
+            memória ocupada pelo último nó que foi removido
+          </Typography>
+          <CodeBoard codeSnippet={removeNodeExample} />
         </Box>
       </Box>
     </Container>
