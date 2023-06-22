@@ -91,7 +91,7 @@ export function StackSection() {
               component="img"
               src={stacks01}
               sx={{
-                width: "50%",
+                width: { xs: "100%", md: "60%" },
                 objectFit: "contain",
               }}
             />
@@ -117,7 +117,7 @@ export function StackSection() {
               component="img"
               src={stacks02}
               sx={{
-                width: "50%",
+                width: { xs: "100%", md: "50%" },
                 objectFit: "contain",
               }}
             />
@@ -137,7 +137,7 @@ export function StackSection() {
               component="img"
               src={stacks03}
               sx={{
-                width: "40%",
+                width: { xs: "100%", md: "50%" },
                 objectFit: "contain",
               }}
             />

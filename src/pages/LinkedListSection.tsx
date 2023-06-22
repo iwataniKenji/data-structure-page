@@ -104,7 +104,7 @@ export function LinkedListSection() {
               component="img"
               src={linkedLists01}
               sx={{
-                width: "60%",
+                width: { xs: "100%", md: "60%" },
                 objectFit: "contain",
               }}
             />
@@ -123,7 +123,7 @@ export function LinkedListSection() {
               component="img"
               src={linkedLists02}
               sx={{
-                width: "60%",
+                width: { xs: "100%", md: "60%" },
                 objectFit: "contain",
               }}
             />
