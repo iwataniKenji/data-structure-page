@@ -1,5 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { HomeSection } from "./pages/HomeSection";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { IntroSection } from "./pages/IntroSection";
 import { ArraySection } from "./pages/ArraySection";
 import { LinkedListSection } from "./pages/LinkedListSection";
@@ -19,7 +18,7 @@ export function Router() {
           <Route path="/stack" element={<StackSection />} />
           <Route path="/queue" element={<QueueSection />} />
           <Route path="/tree" element={<TreesSection />} />
-          <Route index element={<HomeSection />} />
+          <Route index element={<Navigate to="/intro" replace />} />
         </Route>
       </Routes>
     </BrowserRouter>

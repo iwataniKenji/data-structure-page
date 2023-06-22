@@ -24,7 +24,6 @@ export function Navbar() {
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
-  const goToHome = () => navigate("/");
   const goToIntro = () => navigate("/intro");
   const goToArrays = () => navigate("/array");
   const goToLists = () => navigate("/list");
@@ -33,7 +32,6 @@ export function Navbar() {
   const goToTrees = () => navigate("/tree");
 
   const pages = [
-    { name: "Home", onClick: goToHome },
     { name: "Introdução", onClick: goToIntro },
     { name: "Vetores", onClick: goToArrays },
     { name: "Listas", onClick: goToLists },
