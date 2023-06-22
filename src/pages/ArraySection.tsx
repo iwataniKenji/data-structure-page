@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import { CodeBoard } from "../components/CodeBoard";
+import { VideoWrapper } from "../components/VideoWrapper";
 
 export function ArraySection() {
   const vetorMatrizExample = `  #include <stdio.h>
@@ -127,6 +128,12 @@ export function ArraySection() {
             amplamente utilizados e são fundamentais no desenvolvimento de
             programas e algoritmos eficientes.
           </Typography>
+          <Typography>
+            Para àqueles que desejam uma explicação mais fragmentada e
+            simplificada dos primeiros passos na compreensão dessa estrutura de
+            dados segue o aula a seguir:
+          </Typography>
+          <VideoWrapper videoUrl="https://www.youtube.com/embed/5fSf9xSJK7c" />
         </Box>
       </Box>
     </Container>

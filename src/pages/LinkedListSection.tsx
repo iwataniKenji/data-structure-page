@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import { CodeBoard } from "../components/CodeBoard";
+import { ImageWrapper } from "../components/ImageWrapper";
 import linkedLists01 from "../assets/linked-lists-01.png";
 import linkedLists02 from "../assets/linked-lists-02.png";
 
@@ -99,16 +100,8 @@ export function LinkedListSection() {
             vetores, as listas ligadas não exigem que os elementos sejam
             armazenados em posições consecutivas de memória.
           </Typography>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Box
-              component="img"
-              src={linkedLists01}
-              sx={{
-                width: { xs: "100%", md: "60%" },
-                objectFit: "contain",
-              }}
-            />
-          </Box>
+          <ImageWrapper imageUrl={linkedLists01} />
+
           <Typography>
             Essas listas podem ser simplesmente encadeada ou duplamente
             encadeada. Na simplesmente encadeada, cada nó possui apenas um
@@ -118,16 +111,8 @@ export function LinkedListSection() {
             permite percorrer a lista em ambas as direções. Segue um exemplo
             visível dela logo abaixo.
           </Typography>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Box
-              component="img"
-              src={linkedLists02}
-              sx={{
-                width: { xs: "100%", md: "60%" },
-                objectFit: "contain",
-              }}
-            />
-          </Box>
+          <ImageWrapper imageUrl={linkedLists02} />
+
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Vantagens
           </Typography>

@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import { CodeBoard } from "../components/CodeBoard";
+import { ImageWrapper } from "../components/ImageWrapper";
 import stacks01 from "../assets/stacks-01.jpg";
 import stacks02 from "../assets/stacks-02.png";
 import stacks03 from "../assets/stacks-03.png";
@@ -86,16 +87,7 @@ export function StackSection() {
             sujas, onde os novos pratos são colocados no topo e os pratos limpos
             são retirados do topo.
           </Typography>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Box
-              component="img"
-              src={stacks01}
-              sx={{
-                width: { xs: "100%", md: "60%" },
-                objectFit: "contain",
-              }}
-            />
-          </Box>
+          <ImageWrapper imageUrl={stacks01} />
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Utilidade
           </Typography>
@@ -112,16 +104,8 @@ export function StackSection() {
             busca e em estruturas de dados mais complexas, como as árvores e
             grafos.
           </Typography>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Box
-              component="img"
-              src={stacks02}
-              sx={{
-                width: { xs: "100%", md: "50%" },
-                objectFit: "contain",
-              }}
-            />
-          </Box>
+          <ImageWrapper imageUrl={stacks02} />
+
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             No código
           </Typography>
@@ -132,16 +116,7 @@ export function StackSection() {
             baixo, e o "pop" remove o elemento do topo, expondo o elemento que
             estava abaixo.
           </Typography>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Box
-              component="img"
-              src={stacks03}
-              sx={{
-                width: { xs: "100%", md: "50%" },
-                objectFit: "contain",
-              }}
-            />
-          </Box>
+          <ImageWrapper imageUrl={stacks03} />
           <Typography>
             Para exemplificar temos um código mostrando uma implementação com
             ponteiros. Complementando a explicação acima, o método 'push'

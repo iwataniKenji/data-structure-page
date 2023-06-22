@@ -1,4 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
+import { VideoWrapper } from "../components/VideoWrapper";
 
 export function IntroSection() {
   return (
@@ -44,24 +45,7 @@ export function IntroSection() {
             Abaixo segue um vídeo introdutório sobre as principais estruturas de
             dados e algumas aplicações:
           </Typography>
-          <Box
-            sx={{
-              margin: "0 auto",
-              width: { sx: 365, sm: 420, md: 560 },
-              height: { xs: 205, sm: 236, md: 315 },
-              borderRadius: 1,
-              overflow: "hidden",
-            }}
-          >
-            <iframe
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              src="https://www.youtube.com/embed/EfF1M7myAyY"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            ></iframe>
-          </Box>
+          <VideoWrapper videoUrl="https://www.youtube.com/embed/EfF1M7myAyY" />
         </Box>
         <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
           Mais informações
