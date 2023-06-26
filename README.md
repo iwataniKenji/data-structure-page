@@ -52,6 +52,7 @@ $ yarn start
 
 - [x] Dark mode
 - [x] Responsive layout
+- [x] Basic routing system
 - [x] Data structure basics content
 
 ---
