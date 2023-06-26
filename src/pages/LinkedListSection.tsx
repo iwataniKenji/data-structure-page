@@ -112,7 +112,8 @@ export function LinkedListSection() {
             visível dela logo abaixo.
           </Typography>
           <ImageWrapper imageUrl={linkedLists02} />
-
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Vantagens
           </Typography>
@@ -132,6 +133,8 @@ export function LinkedListSection() {
             frequência. Elas são amplamente utilizadas em diversas aplicações,
             como a implementação de pilhas, filas, árvores e grafos
           </Typography>
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Exemplos em código
           </Typography>

@@ -119,7 +119,8 @@ export function QueueSection() {
             do início da fila, expondo o próximo elemento na ordem de chegada.
           </Typography>
           <ImageWrapper imageUrl={queue01} />
-
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Utilização
           </Typography>
@@ -137,7 +138,8 @@ export function QueueSection() {
             possibilitando o uso dos métodos de enqueue e dequeue para
             manipulação dos elementos da fila.
           </Typography>
-
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <CodeBoard codeSnippet={queueExample} />
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Conclusão

@@ -90,6 +90,8 @@ export function TreesSection() {
             elemento '24' o elemento 'root' e pai dos elementos '10' e '32'.
           </Typography>
           <ImageWrapper imageUrl={trees01} />
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Nomenclatura dos elementos
           </Typography>
@@ -118,6 +120,8 @@ export function TreesSection() {
               </Typography>
             </li>
           </ul>
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Árvores binárias
           </Typography>
@@ -143,7 +147,8 @@ export function TreesSection() {
             possuindo sempre um elemento principal (raiz) e outros elementos que
             são filhos de outros elementos.
           </Typography>
-
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Aplicação da árvore binária
           </Typography>
@@ -213,6 +218,8 @@ export function TreesSection() {
               </Typography>
             </li>
           </ul>
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Árvores balanceadas
           </Typography>
@@ -242,7 +249,8 @@ export function TreesSection() {
             balanceada mesmo após as alterações.
           </Typography>
           <ImageWrapper imageUrl={trees02} />
-
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Vantagens das árvores balanceadas
           </Typography>
@@ -254,6 +262,8 @@ export function TreesSection() {
             uma estrutura de dados rápida e eficiente, como bancos de dados,
             sistemas de arquivos e compiladores.
           </Typography>
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Mais informações
           </Typography>

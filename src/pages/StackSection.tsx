@@ -90,6 +90,8 @@ export function StackSection() {
           </Typography>
           <ImageWrapper imageUrl={stacks01} />
           <VideoWrapper videoUrl="https://www.youtube.com/embed/2V91Re1czwA" />
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Utilidade
           </Typography>
@@ -107,7 +109,8 @@ export function StackSection() {
             grafos.
           </Typography>
           <ImageWrapper imageUrl={stacks02} />
-
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             No código
           </Typography>
