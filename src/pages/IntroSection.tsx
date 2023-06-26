@@ -1,7 +1,29 @@
 import { Box, Container, Typography } from "@mui/material";
 import { VideoWrapper } from "../components/VideoWrapper";
+import { CodeBoard } from "../components/CodeBoard";
+import recursion01 from "../assets/recursion-01.png";
+import { ImageWrapper } from "../components/ImageWrapper";
 
 export function IntroSection() {
+  const recursionExample = `  #include <stdio.h>
+
+  int factorial(int number) {
+    // 0! é igual a 1
+    if (number == 0) return 1;
+    
+    //
+    return number * factorial(number - 1);
+  }
+  
+  int main() {
+    int num = 4;
+    int result = factorial(num);
+
+    printf("%d! = %d", num, result);
+        
+    return 0;
+  }`;
+
   return (
     <Container maxWidth="lg">
       <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
@@ -47,13 +69,41 @@ export function IntroSection() {
           </Typography>
           <VideoWrapper videoUrl="https://www.youtube.com/embed/EfF1M7myAyY" />
         </Box>
+
         <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-          Mais informações
+          Recursividade
         </Typography>
-        <Typography>
-          Para mais informações navegue pelas seções presentes na barra
-          superior.
-        </Typography>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+          <Typography>
+            A recursividade é um conceito na programação em que uma função pode
+            chamar a si mesma, seja diretamente ou indiretamente. Isso permite
+            que a função resolva problemas maiores, dividindo-os em subproblemas
+            menores. É um tópico importante para compreender o funcionamento das
+            estruturas de dados que serão passados nas próximas seções.
+          </Typography>
+          <Typography>
+            Para entender melhor o conceito, segue um exemplo de um código para
+            calculo do fatorial de dado valor inteiro (nesse caso, o número
+            '3').
+          </Typography>
+          <CodeBoard codeSnippet={recursionExample} />
+          <Typography>
+            Segue a ilustração da chamada do método 'recursion' apresentado
+            acima. A estrutura apresentada é a de pilha (do qual será explicada
+            com mais aprofundamento na sua respectiva seção).
+          </Typography>
+          <Typography>
+            Resumindo o funcionamento desse algoritmo, a primeira chamada da
+            função 'factorial' é passado com o valor '4', fazendo com que esse
+            valor seja multiplicado com o resultado da chamada do método
+            'factorial' com o valor '3'. Como o resultado da primeira chamada
+            depende do valor da segunda chamada, ela fica em uma pilha de
+            chamadas até que chegue no valor '0', do qual não irá chamar o
+            próprio método e iniciará o processo de desempilhamento, retornando
+            os valores aguardados.
+          </Typography>
+          <ImageWrapper imageUrl={recursion01} />
+        </Box>
       </Box>
     </Container>
   );

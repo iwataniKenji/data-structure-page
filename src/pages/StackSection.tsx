@@ -91,10 +91,10 @@ export function StackSection() {
           <ImageWrapper imageUrl={stacks01} />
           <VideoWrapper videoUrl="https://www.youtube.com/embed/2V91Re1czwA" />
         </Box>
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          Utilidade
+        </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-            Utilidade
-          </Typography>
           <Typography>
             O principal contexto de utilização das stacks é o controle de fluxo
             e o gerenciamento de chamadas de função. Quando uma função é
@@ -110,10 +110,10 @@ export function StackSection() {
           </Typography>
           <ImageWrapper imageUrl={stacks02} />
         </Box>
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          No código
+        </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-            No código
-          </Typography>
           <Typography>
             A operação de inserção em uma pilha é chamada de "push", enquanto a
             operação de remoção é chamada de "pop". O "push" adiciona um

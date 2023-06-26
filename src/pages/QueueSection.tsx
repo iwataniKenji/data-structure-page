@@ -120,10 +120,10 @@ export function QueueSection() {
           </Typography>
           <ImageWrapper imageUrl={queue01} />
         </Box>
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          Utilização
+        </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-            Utilização
-          </Typography>
           <Typography>
             As filas são amplamente utilizadas em diversas aplicações, como
             sistemas de gerenciamento de tarefas, algoritmos de busca e
@@ -138,12 +138,13 @@ export function QueueSection() {
             possibilitando o uso dos métodos de enqueue e dequeue para
             manipulação dos elementos da fila.
           </Typography>
-        </Box>
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <CodeBoard codeSnippet={queueExample} />
-          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-            Conclusão
-          </Typography>
+        </Box>
+
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          Conclusão
+        </Typography>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography>
             Em resumo, as filas são estruturas de dados que seguem o princípio
             FIFO, permitindo a inserção no final da fila e a remoção no início

@@ -113,10 +113,10 @@ export function LinkedListSection() {
           </Typography>
           <ImageWrapper imageUrl={linkedLists02} />
         </Box>
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          Vantagens
+        </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-            Vantagens
-          </Typography>
           <Typography>
             A vantagem do uso dessa estrutura está na flexibilidade para a
             inserção e exclusão de elementos. Essas operações podem ser
@@ -134,10 +134,10 @@ export function LinkedListSection() {
             como a implementação de pilhas, filas, árvores e grafos
           </Typography>
         </Box>
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          Exemplos em código
+        </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-            Exemplos em código
-          </Typography>
           <Typography>
             Segue um exemplo de código sobre lista encadeada simples. Em uma
             explicação sucinta, é criado 3 estruturas chamados 'node' que contém

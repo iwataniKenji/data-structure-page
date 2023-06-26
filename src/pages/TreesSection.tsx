@@ -91,11 +91,10 @@ export function TreesSection() {
           </Typography>
           <ImageWrapper imageUrl={trees01} />
         </Box>
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          Nomenclatura dos elementos
+        </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-            Nomenclatura dos elementos
-          </Typography>
-
           <ul>
             <li>
               <Typography>
@@ -121,10 +120,10 @@ export function TreesSection() {
             </li>
           </ul>
         </Box>
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          Árvores binárias
+        </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-            Árvores binárias
-          </Typography>
           <Typography>
             Uma árvore binária é um tipo de árvore em que cada nó pode ter no
             máximo dois nós filhos: um nó filho esquerdo e outro direito. É
@@ -148,10 +147,10 @@ export function TreesSection() {
             são filhos de outros elementos.
           </Typography>
         </Box>
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          Aplicação da árvore binária
+        </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-            Aplicação da árvore binária
-          </Typography>
           <Typography>
             Agora, se baseando na representação da árvore na imagem acima, segue
             um exemplo de código de aplicação do nível 0 e nível 1 em código.
@@ -219,10 +218,10 @@ export function TreesSection() {
             </li>
           </ul>
         </Box>
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          Árvores balanceadas
+        </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-            Árvores balanceadas
-          </Typography>
           <Typography>
             Árvores balanceadas são estruturas de dados em forma de árvore que
             garantem um equilíbrio adequado entre os nós em termos de altura ou
@@ -250,10 +249,10 @@ export function TreesSection() {
           </Typography>
           <ImageWrapper imageUrl={trees02} />
         </Box>
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          Vantagens das árvores balanceadas
+        </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-            Vantagens das árvores balanceadas
-          </Typography>
           <Typography>
             A vantagem principal das árvores balanceadas é que elas garantem um
             tempo de execução eficiente e previsível para operações de busca,
@@ -263,10 +262,10 @@ export function TreesSection() {
             sistemas de arquivos e compiladores.
           </Typography>
         </Box>
+        <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
+          Mais informações
+        </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
-            Mais informações
-          </Typography>
           <Typography>
             O tema 'árvores', assim como grafos (tópico não abordado), acaba
             sendo um tópico mais extenso contendo diversas abordagens para
