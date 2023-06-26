@@ -1,6 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import { CodeBoard } from "../components/CodeBoard";
 import { ImageWrapper } from "../components/ImageWrapper";
+import { VideoWrapper } from "../components/VideoWrapper";
 import stacks01 from "../assets/stacks-01.jpg";
 import stacks02 from "../assets/stacks-02.png";
 import stacks03 from "../assets/stacks-03.png";
@@ -88,6 +89,7 @@ export function StackSection() {
             são retirados do topo.
           </Typography>
           <ImageWrapper imageUrl={stacks01} />
+          <VideoWrapper videoUrl="https://www.youtube.com/embed/2V91Re1czwA" />
           <Typography sx={{ fontSize: 32, fontWeight: 500 }}>
             Utilidade
           </Typography>
