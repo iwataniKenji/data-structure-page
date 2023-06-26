@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+<h1 align="center">DATA STRUCTURE PAGE</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2 align="center">Summary</h2>
 
-## Available Scripts
+<p align="center">
+    <a href="#about">📙 About</a>
+    <!-- <a href="#preview">🖼️ Preview</a> -->
+    <a href="#start">📖 How to Start</a>
+    <a href="#features">💡 Features</a>
+    <a href="#technologies">💻 Technologies</a>
+</p>
 
-In the project directory, you can run:
+<h4 align="center">
+   ✔️ Data Structure project finished ✔️
+</h4>
 
-### `yarn start`
+<h2 id="about">📙 About</H2>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p>Project developed for academic purposes in order to introduce students to data structure discipline content, illustrating with algorithms in C. Most of the code are explained through comments and paragraphs with overview information for each respective implementation.
+<p>Originally created and made by <a href="https://www.linkedin.com/in/kleverson-kenji-iwatani/">Kenji Iwatani</a></p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- ---
 
-### `yarn test`
+<H2 id="preview">🖼️ Preview</H2>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<section align="center">
+    <img alt="project overview" src="./assets/preview.gif" width="300"/>
+</section> -->
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<H2 id="start">📖 How to Start</H2>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone this repository
+$ git clone https://github.com/iwataniKenji/data-structure-page.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Access the project directory
+$ cd data-structure-page
 
-### `yarn eject`
+# Install dependencies
+$ yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Start application
+$ yarn start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<H2 id="features">💡 Features</H2>
 
-## Learn More
+- [x] Dark mode
+- [x] Responsive layout
+- [x] Data structure basics content
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<H2 id="technologies">💻 Technologies</H2>
+
+- [x] <a href="https://react.dev/">React</a>
+- [x] <a href="https://www.typescriptlang.org/">Typescript</a>
+- [x] <a href="https://mui.com/">Mui</a>
+- [x] <a href="https://vercel.com/">Vercel</a>
