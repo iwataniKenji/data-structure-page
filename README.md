@@ -19,6 +19,10 @@
 <p>Project developed for academic purposes in order to introduce students to data structure discipline content, illustrating with algorithms in C. Most of the code are explained through comments and paragraphs with overview information for each respective implementation.
 <p>Originally created and made by <a href="https://www.linkedin.com/in/kleverson-kenji-iwatani/">Kenji Iwatani</a></p>
 
+<p>
+    <h3><a href="https://kenji-data-structure-page.vercel.app/intro">Check website &rarr;</a></h3>
+</p>
+
 <!-- ---
 
 <H2 id="preview">🖼️ Preview</H2>
